@@ -1,18 +1,25 @@
 {
   "extends": [ "eslint:recommended", "plugin:react/recommended" ],
+
   "plugins": [ "react" ],
+
   "env": {
     "browser": true,
     "node": true,
     "es6": true
   },
+
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 6,
     "ecmaFeatures": {
+      "classes": true,
       "impliedStrict": true,
       "experimentalObjectRestSpread": true,
       "jsx": true
     }
-  }
+  },
+  "rules": {
+    "react/prop-types": [1, {skipUndeclared: true}]
+    }
 }
